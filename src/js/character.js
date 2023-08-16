@@ -21,4 +21,20 @@ export default class Character {
     }
     throw new Error('Short name');
   }
+
+  levelUp() {
+    if (this.health <= 0) {
+      throw new Error("Can't level up a dead person");
+    }
+    this.level += 1;
+    this.attack += (this.attack * 0.2);
+    this.defence += (this.defence * 0.2);
+  }
+
+  damage(points) {
+    if (this.health <= 0) {
+      throw new Error('Person is dead');
+    }
+    this.health -= points * (1 - this.defence / 100);
+  }
 }
