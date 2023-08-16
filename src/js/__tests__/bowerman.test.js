@@ -26,6 +26,6 @@ test('method damage with health less 0', () => {
 
 test('level up with health less 0', () => {
   heroBowerman.health = 100;
-  heroBowerman.damage(50)
+  heroBowerman.damage(50);
   expect(heroBowerman.health).toBe(65);
 });
