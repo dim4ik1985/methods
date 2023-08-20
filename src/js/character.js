@@ -1,16 +1,11 @@
 export default class Character {
-  constructor(name, type, attack, defence) {
+  constructor(name, type) {
     this.name = name;
     this.type = type;
     this.health = 100;
     this.level = 1;
-    this.attack = attack;
-    this.defence = defence;
-  }
-
-  get name() {
-    // eslint-disable-next-line no-underscore-dangle
-    return this._name;
+    this.attack = undefined;
+    this.defence = undefined;
   }
 
   set name(value) {
@@ -20,6 +15,16 @@ export default class Character {
       return;
     }
     throw new Error('Short name');
+  }
+
+  set type(value) {
+    const typesHeroes = ['Bowerman', 'Swordsman', 'Swordsman', 'Daemon', 'Undead', 'Zombie'];
+    if (typesHeroes.includes(value)) {
+      // eslint-disable-next-line no-underscore-dangle
+      this._type = value;
+      return;
+    }
+    throw new Error('There is no such type');
   }
 
   levelUp() {

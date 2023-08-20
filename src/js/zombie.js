@@ -7,11 +7,6 @@ export default class Zombie extends Character {
     this.defence = 10;
   }
 
-  get type() {
-    // eslint-disable-next-line no-underscore-dangle
-    return this._type;
-  }
-
   set type(value) {
     if (value === 'Zombie') {
       // eslint-disable-next-line no-underscore-dangle

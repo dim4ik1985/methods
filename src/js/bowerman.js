@@ -8,11 +8,6 @@ export default class Bowman extends Character {
     this.defence = 25;
   }
 
-  get type() {
-    // eslint-disable-next-line no-underscore-dangle
-    return this._type;
-  }
-
   set type(value) {
     if (value === 'Bowerman') {
       // eslint-disable-next-line no-underscore-dangle

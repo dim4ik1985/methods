@@ -7,11 +7,6 @@ export default class Magician extends Character {
     this.defence = 40;
   }
 
-  get type() {
-    // eslint-disable-next-line no-underscore-dangle
-    return this._type;
-  }
-
   set type(value) {
     if (value === 'Magician') {
       // eslint-disable-next-line no-underscore-dangle

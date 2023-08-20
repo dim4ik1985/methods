@@ -7,13 +7,10 @@ export default class Daemon extends Character {
     this.defence = 40;
   }
 
-  get type() {
-    return this.type;
-  }
-
   set type(value) {
     if (value === 'Daemon') {
-      this.type = value;
+      // eslint-disable-next-line no-underscore-dangle
+      this._type = value;
       return;
     }
     throw new Error('wrong type');

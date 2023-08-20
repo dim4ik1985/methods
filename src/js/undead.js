@@ -7,11 +7,6 @@ export default class Undead extends Character {
     this.defence = 25;
   }
 
-  get type() {
-    // eslint-disable-next-line no-underscore-dangle
-    return this._type;
-  }
-
   set type(value) {
     if (value === 'Undead') {
       // eslint-disable-next-line no-underscore-dangle
