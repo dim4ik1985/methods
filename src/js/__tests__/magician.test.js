@@ -41,5 +41,3 @@ test('check damage', () => {
   pers.damage(50);
   expect(pers.health).toBe(70);
 });
-
-
